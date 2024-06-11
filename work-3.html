@@ -8,26 +8,12 @@
   </head>
   <body>
     <div id="root"></div>
+
+    <script src="tagcom.js"></script>
+    <script src="makehtml.js"></script>
+    <script src="htmlrender.js"></script>
     <script>
       const root = document.getElementById("root");
-
-      const TagComponent = (tegname, textnode) => {
-        return `<${tegname}>${textnode}</${tegname}>`;
-      };
-
-      const app = () => {
-        return `
-        ${TagComponent("h1", "송이현입니다")}
-        ${TagComponent("p", "최유진입니다")}
-        ${TagComponent("h2", "유호영입니다")}
-        `;
-      };
-
-      console.log(app());
-
-      const render = () => {
-        root.innerHTML = app();
-      };
 
       render();
     </script>
