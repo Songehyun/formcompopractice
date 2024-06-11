@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script>
+      const root = document.getElementById("root");
+
+      const TagComponent = (tegname, textnode) => {
+        return `<${tegname}>${textnode}</${tegname}>`;
+      };
+
+      const app = () => {
+        return `
+        ${TagComponent("h1", "송이현입니다")}
+        ${TagComponent("p", "최유진입니다")}
+        ${TagComponent("h2", "유호영입니다")}
+        `;
+      };
+
+      console.log(app());
+
+      const render = () => {
+        root.innerHTML = app();
+      };
+
+      render();
+    </script>
+  </body>
+</html>
